@@ -1,0 +1,6 @@
+.landing-page {
+  background-color: #f7f7ff;
+  height: 100vh;
+  overflow: auto;
+  overflow-x: hidden;
+}
