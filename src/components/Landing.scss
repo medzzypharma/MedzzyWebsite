@@ -1,0 +1,154 @@
+@import "../breakpoints/breakpoints.scss";
+
+.wrapper{
+    background-image: url('../assets/coming_soon_bg.svg');
+    background-color: #F7F7FF;
+    height: 100%;
+    position: relative;
+    
+
+    .content{
+        .logo{
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: 9%;
+        }
+        .coming-soon-large{
+            display: block;
+            position: absolute;
+            top: 35%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: 30%;
+        }
+        .coming-soon-small{
+            display: none;
+            position: absolute;
+            top: 35%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: 30%;
+        }
+        @include media('<=desktop'){
+            .coming-soon-large{
+                height: 22%;
+            }
+        }
+        @include media('<=tablet'){
+            .logo{
+                height: 6%;
+            }
+            .coming-soon-small{
+                display: block;
+                height: 23%;
+            }
+            .coming-soon-large{
+                display: none;
+            }
+        }
+        
+        .description{
+            width: 100%;
+            font-size: 24px;
+            font-weight: 400;
+            position: absolute;
+            top: 55%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        @include media('<=desktop'){
+            .description{
+                font-size: 20px;
+            }
+        }
+        @include media('<=tablet'){
+            .description{
+                font-size: 14px;
+            }
+        }
+        @include media('<=phone'){
+            .description{
+                font-size: 12px;
+            }
+        }
+
+        form{
+            position: absolute;
+            top: 70%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            input{
+                width: 30%;
+                height: 32px;
+                border-top-left-radius: 5px;
+                border-bottom-left-radius: 5px;
+                border: 1px solid #B4B4B4;
+                color: #B4B4B4;
+                font-size: 14px;
+                padding-left: 2%;
+            }
+            button{
+                background-color: #647CF5;
+                border: none;
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 5px;
+                width: 13%;
+                color: #FFFFFF;
+                height: 36px;
+                font-size: 16px;
+                cursor: pointer;
+            }
+            
+        }
+        @include media('<=tablet'){
+            form{
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                input{
+                    width: 85%;
+                    border-radius: 5px;
+                    height: 36px;
+                }
+                button{
+                    margin-top: 5%;
+                    width: 30%;
+                    border-radius: 5px;
+                    font-size: 12px;
+                }
+            } 
+        }
+        .footer{
+            position: absolute;
+            top: 85%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            height: 7%;
+
+
+            .google{
+                margin-right: 5%;
+            }
+        }
+        @include media('<=tablet'){
+            .footer{
+                height: 5%;
+                top: 90%;
+            }
+        }
+
+    }
+}
