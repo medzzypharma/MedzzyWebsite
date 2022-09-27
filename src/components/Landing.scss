@@ -137,16 +137,26 @@
             justify-content: center;
             width: 100%;
             height: 7%;
+            
+            a{
+                cursor: pointer;
+            }
 
-
-            .google{
+            .first{
                 margin-right: 5%;
             }
+            
         }
         @include media('<=tablet'){
             .footer{
                 height: 5%;
                 top: 90%;
+                .google{
+                    height: 100%;
+                }
+                .apple{
+                    height: 100%;
+                }
             }
         }
 

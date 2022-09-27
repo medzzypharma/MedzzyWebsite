@@ -22,14 +22,18 @@ const Landing = () => {
                 </div>
             </div>
             <div className="form">
-                <form action="https://formkeep.com/f/2e3976f204ea" accept-charset="UTF-8" enctype="multipart/form-data" method="POST">
+                <form action={process.env.REACT_APP_API} accept-charset="UTF-8" enctype="multipart/form-data" method="POST">
                     <input type="text" placeholder='Your email address' name='email'/>
                     <button>Notify Me</button>
                 </form>
             </div>
             <div className="footer">
-                <img src={GooglePlay} alt="" className='google'/>
-                <img src={IosPlay} alt="" className='apple'/>
+                <a href={process.env.REACT_APP_GOOGLE_PLAY} className="first">
+                    <img src={GooglePlay} alt="" className='google'/>
+                </a>
+                <a href={process.env.REACT_APP_APPLE_PLAY}>
+                    <img src={IosPlay} alt="" className='apple'/>
+                </a>
             </div>
         </div>
     </div>
